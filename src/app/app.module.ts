@@ -25,6 +25,7 @@ import { NavComponent } from './views/components/template/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { TecnicoReadComponent } from './views/components/tecnico/tecnico-read/tecnico-read.component';
 import { TecnicoCreateComponent } from './views/components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoUpdateComponent } from './views/components/tecnico-update/tecnico-update.component';
 
 
 
@@ -37,6 +38,7 @@ import { TecnicoCreateComponent } from './views/components/tecnico/tecnico-creat
     HomeComponent,
     TecnicoReadComponent,
     TecnicoCreateComponent,
+    TecnicoUpdateComponent,
   ],
   imports: [
     BrowserModule,

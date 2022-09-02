@@ -14,7 +14,7 @@ export class TecnicoReadComponent implements AfterViewInit {
 
   tecnicos: Tecnico[] = []; //Lista de técnicos vazia
 
-  displayedColumns: string[] = ['id', 'nome', 'cpf', 'telefone']; 
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'telefone', 'action']; 
   dataSource = new MatTableDataSource<Tecnico>(this.tecnicos); //Componente de Tabela, recebendo uma lista de Técnicos do tipo Técnico
 
   @ViewChild(MatPaginator) paginator!: MatPaginator; //Componente de paginação injetado como atributo

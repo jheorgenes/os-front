@@ -12,10 +12,10 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClienteReadComponent implements AfterViewInit {
 
-  tecnicos: Cliente[] = []; //Lista de técnicos vazia
+  clientes: Cliente[] = []; //Lista de Clientes vazia
 
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'telefone', 'action']; 
-  dataSource = new MatTableDataSource<Cliente>(this.tecnicos); //Componente de Tabela, recebendo uma lista de Técnicos do tipo Técnico
+  dataSource = new MatTableDataSource<Cliente>(this.clientes); //Componente de Tabela, recebendo uma lista de Clientes do tipo Cliente
 
   @ViewChild(MatPaginator) paginator!: MatPaginator; //Componente de paginação injetado como atributo
 
@@ -30,13 +30,13 @@ export class ClienteReadComponent implements AfterViewInit {
 
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
-      this.tecnicos = resposta; //Recebe a lista de técnicos obtida da API
-      this.dataSource = new MatTableDataSource<Cliente>(this.tecnicos); //Instancia o dataSource no tipo Cliente
+      this.clientes = resposta; //Recebe a lista de Clientes obtida da API
+      this.dataSource = new MatTableDataSource<Cliente>(this.clientes); //Instancia o dataSource no tipo Cliente
       this.dataSource.paginator = this.paginator;
     })
   }
 
   navigateToCreate(): void {
-    this.router.navigate(['tecnicos/create'])
+    this.router.navigate(['clientes/create'])
   }
 }

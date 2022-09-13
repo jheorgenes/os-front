@@ -6,6 +6,7 @@ import { TecnicoCreateComponent } from './views/components/tecnico/tecnico-creat
 import { TecnicoReadComponent } from './views/components/tecnico/tecnico-read/tecnico-read.component';
 import { TecnicoDeleteComponent } from './views/components/tecnico/tecnico-delete/tecnico-delete.component';
 import { ClienteReadComponent } from './views/components/cliente/cliente-read/cliente-read.component';
+import { ClienteCreateComponent } from './views/components/cliente/cliente-create/cliente-create.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'clientes',
     component: ClienteReadComponent
+  },
+  {
+    path: 'clientes/create',
+    component: ClienteCreateComponent
   }
 ];
 
